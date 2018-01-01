@@ -11,37 +11,56 @@ namespace dotNet_Core_Test
             Console.ReadKey(true);
         }
 
+        static void ColorPrintln(string name, string data)
+        {
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("{0}: ", name);
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write("{0}", data);
+            Console.ResetColor();
+            Console.WriteLine();
+        }
+
         static void EnvironmentRun()
         {
             Console.WriteLine("[Environment]");
-            Console.WriteLine("CommandLine: {0}", Environment.CommandLine);
-            Console.WriteLine("CurrentDirectory: {0}", Environment.CurrentDirectory);
-            Console.WriteLine("CurrentManagedThreadId: {0}", Environment.CurrentManagedThreadId);
-            Console.WriteLine("ExitCode: {0}", Environment.ExitCode);
-            Console.WriteLine("HasShutdownStarted: {0}", Environment.HasShutdownStarted);
-            Console.WriteLine("Is64BitOperatingSystem: {0}", Environment.Is64BitOperatingSystem);
-            Console.WriteLine("Is64BitProcess: {0}", Environment.Is64BitProcess);
-            Console.WriteLine("MachineName: {0}", Environment.MachineName);
-            Console.WriteLine("NewLine: {0}", Environment.NewLine);
-            Console.WriteLine("OSVersion: {0}", Environment.OSVersion);
-            Console.WriteLine("ProcessorCount: {0}", Environment.ProcessorCount);
-            Console.WriteLine("StackTrace: {0}", Environment.StackTrace);
-            Console.WriteLine("SystemDirectory: {0}", Environment.SystemDirectory);
-            Console.WriteLine("SystemPageSize: {0}", Environment.SystemPageSize);
-            Console.WriteLine("TickCount: {0}", Environment.TickCount);
-            Console.WriteLine("UserDomainName: {0}", Environment.UserDomainName);
-            Console.WriteLine("UserInteractive: {0}", Environment.UserInteractive);
-            Console.WriteLine("UserName: {0}", Environment.UserName);
-            Console.WriteLine("Version: {0}", Environment.Version);
-            Console.WriteLine("WorkingSet: {0}", Environment.WorkingSet);
+            ColorPrintln("Environment.CommandLine", Environment.CommandLine);
+            ColorPrintln("Environment.CurrentDirectory", Environment.CurrentDirectory);
+            ColorPrintln("Environment.CurrentManagedThreadId", Environment.CurrentManagedThreadId.ToString());
+            ColorPrintln("Environment.ExitCode", Environment.ExitCode.ToString());
+            ColorPrintln("Environment.HasShutdownStarted", Environment.HasShutdownStarted.ToString());
+            ColorPrintln("Environment.Is64BitOperatingSystem", Environment.Is64BitOperatingSystem.ToString());
+            ColorPrintln("Environment.Is64BitProcess", Environment.Is64BitProcess.ToString());
+            ColorPrintln("Environment.MachineName", Environment.MachineName);
+            ColorPrintln("Environment.NewLine", Environment.NewLine);
+            ColorPrintln("Environment.OSVersion", Environment.OSVersion.ToString());
+            ColorPrintln("Environment.ProcessorCount", Environment.ProcessorCount.ToString());
+            //ColorPrintln("Environment.StackTrace", Environment.StackTrace);
+            ColorPrintln("Environment.SystemDirectory", Environment.SystemDirectory);
+            ColorPrintln("Environment.SystemPageSize", Environment.SystemPageSize.ToString());
+            ColorPrintln("Environment.TickCount", Environment.TickCount.ToString());
+            ColorPrintln("Environment.UserDomainName", Environment.UserDomainName);
+            ColorPrintln("Environment.UserInteractive", Environment.UserInteractive.ToString());
+            ColorPrintln("Environment.UserName", Environment.UserName.ToString());
+            ColorPrintln("Environment.Version", Environment.Version.ToString());
+            ColorPrintln("Environment.WorkingSet", Environment.WorkingSet.ToString());
             Console.WriteLine("[Environment.SpecialFolder]");
             foreach (Environment.SpecialFolder v in Enum.GetValues(typeof(Environment.SpecialFolder))) {
-                Console.WriteLine("Environment.SpecialFolder.{0}: {1}", v.ToString(),Environment.GetFolderPath(v));
+                ColorPrintln("Environment.SpecialFolder." + v.ToString(), Environment.GetFolderPath(v));
+                /*
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.Write("Environment.SpecialFolder.{0}: ", v.ToString());
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write("{0}", Environment.GetFolderPath(v));
+                Console.ResetColor();
+                Console.WriteLine();
+                */
             }
-            Console.Write("Drive: ");
+            Console.WriteLine("[Environment.GetLogicalDrives()]");
+            string drives = string.Empty;
             foreach (string s in Environment.GetLogicalDrives())
-                Console.Write("{0} ,", s);
-            Console.WriteLine();
+                drives += s + " ";
+            ColorPrintln("Drive", drives);
         }
 
         
