@@ -6,7 +6,8 @@ namespace dotNet_Core_Test
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("dotNet Core Test");
+            //Console.WriteLine("dotNet Core Test");
+            init();
             EnvironmentRun();
             Console.ReadKey(true);
         }
@@ -45,6 +46,7 @@ namespace dotNet_Core_Test
             ColorPrintln("Environment.Version", Environment.Version.ToString());
             ColorPrintln("Environment.WorkingSet", Environment.WorkingSet.ToString());
             Console.WriteLine("[Environment.SpecialFolder]");
+            // https://zenmai.wordpress.com/2009/11/11/enum%E3%81%AE%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0%E3%82%92foreach%E3%81%A7%E4%BD%BF%E3%81%86%E3%80%8Cc/
             foreach (Environment.SpecialFolder v in Enum.GetValues(typeof(Environment.SpecialFolder))) {
                 ColorPrintln("Environment.SpecialFolder." + v.ToString(), Environment.GetFolderPath(v));
                 /*
@@ -63,6 +65,23 @@ namespace dotNet_Core_Test
             ColorPrintln("Drive", drives);
         }
 
-        
+        static void init()
+        {
+            // http://www.patorjk.com/software/taag/#p=display&f=Doom&t=.NET%20Core%20Test
+            string[] title = {
+                @"   _   _  _____ _____   _____                  _____         _   ",
+                @"  | \ | ||  ___|_   _| /  __ \                |_   _|       | |  ",
+                @"  |  \| || |__   | |   | /  \/ ___  _ __ ___    | | ___  ___| |_ ",
+                @"  | . ` ||  __|  | |   | |    / _ \| '__/ _ \   | |/ _ \/ __| __|",
+                @" _| |\  || |___  | |   | \__/\ (_) | | |  __/   | |  __/\__ \ |_ ",
+                @"(_)_| \_/\____/  \_/    \____/\___/|_|  \___|   \_/\___||___/\__|",
+                @"                                                                 "
+            };
+
+            Console.ForegroundColor = ConsoleColor.White;
+            foreach (string s in title)
+                Console.WriteLine(s);
+            Console.ResetColor();
+        }
     }
 }
