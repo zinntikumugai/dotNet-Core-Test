@@ -1,0 +1,11 @@
+F:\DATA\Programming\Project\dotNet Core Test\dotNet Core Test\bin\Debug\netcoreapp2.0\dotNet Core Test.deps.json
+F:\DATA\Programming\Project\dotNet Core Test\dotNet Core Test\bin\Debug\netcoreapp2.0\dotNet Core Test.runtimeconfig.json
+F:\DATA\Programming\Project\dotNet Core Test\dotNet Core Test\bin\Debug\netcoreapp2.0\dotNet Core Test.runtimeconfig.dev.json
+F:\DATA\Programming\Project\dotNet Core Test\dotNet Core Test\bin\Debug\netcoreapp2.0\dotNet Core Test.dll
+F:\DATA\Programming\Project\dotNet Core Test\dotNet Core Test\bin\Debug\netcoreapp2.0\dotNet Core Test.pdb
+F:\DATA\Programming\Project\dotNet Core Test\dotNet Core Test\obj\Debug\netcoreapp2.0\dotNet Core Test.csprojResolveAssemblyReference.cache
+F:\DATA\Programming\Project\dotNet Core Test\dotNet Core Test\obj\Debug\netcoreapp2.0\dotNet Core Test.csproj.CoreCompileInputs.cache
+F:\DATA\Programming\Project\dotNet Core Test\dotNet Core Test\obj\Debug\netcoreapp2.0\dotNet Core Test.AssemblyInfoInputs.cache
+F:\DATA\Programming\Project\dotNet Core Test\dotNet Core Test\obj\Debug\netcoreapp2.0\dotNet Core Test.AssemblyInfo.cs
+F:\DATA\Programming\Project\dotNet Core Test\dotNet Core Test\obj\Debug\netcoreapp2.0\dotNet Core Test.dll
+F:\DATA\Programming\Project\dotNet Core Test\dotNet Core Test\obj\Debug\netcoreapp2.0\dotNet Core Test.pdb
