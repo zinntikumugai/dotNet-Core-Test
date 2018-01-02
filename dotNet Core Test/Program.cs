@@ -22,9 +22,16 @@ namespace dotNet_Core_Test
             Console.WriteLine();
         }
 
+        static void TitlePrintln(string title)
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine(title);
+            Console.ResetColor();
+        }
+
         static void EnvironmentRun()
         {
-            Console.WriteLine("[Environment]");
+            TitlePrintln("[Environment]");
             ColorPrintln("Environment.CommandLine", Environment.CommandLine);
             ColorPrintln("Environment.CurrentDirectory", Environment.CurrentDirectory);
             ColorPrintln("Environment.CurrentManagedThreadId", Environment.CurrentManagedThreadId.ToString());
@@ -45,7 +52,7 @@ namespace dotNet_Core_Test
             ColorPrintln("Environment.UserName", Environment.UserName.ToString());
             ColorPrintln("Environment.Version", Environment.Version.ToString());
             ColorPrintln("Environment.WorkingSet", Environment.WorkingSet.ToString());
-            Console.WriteLine("[Environment.SpecialFolder]");
+            TitlePrintln("[Environment.SpecialFolder]");
             // https://zenmai.wordpress.com/2009/11/11/enum%E3%81%AE%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0%E3%82%92foreach%E3%81%A7%E4%BD%BF%E3%81%86%E3%80%8Cc/
             foreach (Environment.SpecialFolder v in Enum.GetValues(typeof(Environment.SpecialFolder))) {
                 ColorPrintln("Environment.SpecialFolder." + v.ToString(), Environment.GetFolderPath(v));
@@ -58,7 +65,7 @@ namespace dotNet_Core_Test
                 Console.WriteLine();
                 */
             }
-            Console.WriteLine("[Environment.GetLogicalDrives()]");
+            TitlePrintln("[Environment.GetLogicalDrives()]");
             string drives = string.Empty;
             foreach (string s in Environment.GetLogicalDrives())
                 drives += s + " ";
