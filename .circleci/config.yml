@@ -10,5 +10,6 @@ jobs:
       - run:
           name: Build
           command: |
+             ll -la;
              dotnet restore;
              dotnet build;
