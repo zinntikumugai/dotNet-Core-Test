@@ -10,7 +10,7 @@ jobs:
           command: date
       - run:
           name: Machine
-          command: lsb_release -a
+          command: ver
       - run:
           name: BuildTest
           command: |
