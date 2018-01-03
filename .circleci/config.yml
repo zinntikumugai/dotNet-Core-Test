@@ -3,7 +3,10 @@ jobs:
   build:
     docker:
       - image: microsoft/dotnet:2.0.0-sdk
-    steps:
+        environment:
+          DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
+          NUGET_XMLDOC_MODE: skip
+  steps:
       - checkout
       - run:
           name: Print the Current Time
