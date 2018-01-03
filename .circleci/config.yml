@@ -9,7 +9,10 @@ jobs:
           name: Print the Current Time
           command: date
       - run:
+          name: Machine
+          command: lsb_release -a
+      - run:
           name: BuildTest
-          command: 
-             - dotnet restore
-             - dotnet build
+          command: |
+             dotnet restore;
+             dotnet build;
