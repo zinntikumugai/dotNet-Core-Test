@@ -10,4 +10,4 @@ jobs:
           command: date
       - run:
           name BuildTest
-          command: dotnet restore;dotnet build
+          command: dotnet restore
