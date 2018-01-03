@@ -6,7 +6,7 @@ jobs:
         environment:
           DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
           NUGET_XMLDOC_MODE: skip
-  steps:
+    steps:
       - checkout
       - run:
           name: Print the Current Time
