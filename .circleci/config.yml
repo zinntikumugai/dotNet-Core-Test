@@ -4,12 +4,11 @@ jobs:
     docker:
       - image: microsoft/dotnet:2.0.0-sdk
     steps:
-      - checkout
       - run:
           name: Print the Current Time
           command: date
       - run:
-          name: BuildTest
+          name: Build
           command: |
              dotnet restore;
              dotnet build;
