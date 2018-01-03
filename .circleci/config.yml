@@ -9,9 +9,6 @@ jobs:
           name: Print the Current Time
           command: date
       - run:
-          name: Machine
-          command: ver
-      - run:
           name: BuildTest
           command: |
              dotnet restore;
